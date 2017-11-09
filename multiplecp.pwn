@@ -191,8 +191,6 @@ public MC_DrawCheckpointTimer()
 					{
 						RemovePlayerMapIcon( playerid, MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_ICON_ID ] );
 						MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_VISIBLE ] = 0; 
-						
-						SendClientMessage(playerid, -1, "Hiding");
 					}
 					
 					if( !MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_PLAYER_INSIDE ])
@@ -220,7 +218,6 @@ public MC_DrawCheckpointTimer()
 				{
 					if( (GetPlayerVirtualWorld( playerid ) == MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_WORLD ] || MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_WORLD ] == -1) && (GetPlayerInterior( playerid ) == MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_INTERIOR ] || MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_INTERIOR ] == -1))
 					{
-						SendClientMessage(playerid, -1, "Showing");
 						MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_VISIBLE ] = 1; 
 						SetPlayerMapIcon( playerid, MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_ICON_ID ], MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_POS_X ], MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_POS_Y ], MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_POS_Z ], 0, MC_Checkpoints[ playerid ][ checkpoint_id ][ CP_COLOR ], MAPICON_GLOBAL_CHECKPOINT ); 
 					}
